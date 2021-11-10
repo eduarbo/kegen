@@ -38,7 +38,7 @@ const manipulators = Object.entries(appsMap).map(([key, app]) => ({
 	to: [{ shell_command: `open -a "${app}"` }],
 }));
 
-export default {
+module.exports = {
 	title: 'Launcher',
 	rules: [
 		{

@@ -1,11 +1,10 @@
-import { remap } from '../../src/main';
+const { remap } = require('kegen');
 
 const mandatoryMods = ['left_shift', 'right_shift'];
 const optionalMods = [];
-const remapToLayer = (keyCode, toKey) =>
-	remap([keyCode, mandatoryMods, optionalMods], toKey);
+const remapToLayer = (keyCode, toKey) => remap([keyCode, mandatoryMods, optionalMods], toKey);
 
-export default {
+module.exports = {
 	title: 'Fn layer',
 	rules: [
 		{

@@ -1,9 +1,9 @@
-import * as kegen from '../../src/main';
+const kegen = require('kegen');
 
 const remap = (fromKey, toKey) => kegen.remap(fromKey, toKey);
 const modTap = (fromKey, toKey, toKeyOnTap) => kegen.modTap(fromKey, toKey, toKeyOnTap);
 
-export default {
+module.exports = {
 	title: 'Alternative Qwerty layer',
 	rules: [
 		{

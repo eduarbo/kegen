@@ -1,12 +1,12 @@
-import { toJSON } from '../src/main';
+const { toJSON } = require('kegen');
 
-import arrows from './mods/arrows';
-import emacs from './mods/emacs';
-import fn from './mods/fn';
-import launcher from './mods/launcher';
-import qwerty from './mods/qwerty';
-import symbols from './mods/symbols';
-import accents from './mods/accents';
+const arrows = require('./mods/arrows');
+const emacs = require('./mods/emacs');
+const fn = require('./mods/fn');
+const launcher = require('./mods/launcher');
+const qwerty = require('./mods/qwerty');
+const symbols = require('./mods/symbols');
+const accents = require('./mods/accents');
 
 const output = {
 	arrows,

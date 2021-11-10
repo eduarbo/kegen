@@ -1,10 +1,10 @@
-import { remap } from '../../src/main';
+const { remap } = require('kegen');
 
 const mandatoryMods = ['open_bracket'];
 const optionalMods = [''];
 const remapToLayer = (keyCode, toKey) => remap([keyCode, mandatoryMods, optionalMods], toKey);
 
-export default {
+module.exports = {
 	title: 'Accents layer',
 	rules: [
 		{

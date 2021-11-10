@@ -1,6 +1,4 @@
-import { jest } from '@jest/globals';
-
-import toJSON from './toJSON';
+const { toJSON } = require('./main');
 
 describe('toJSON()', () => {
 	it('transforms the object into JSON and prints it to stdout', () => {

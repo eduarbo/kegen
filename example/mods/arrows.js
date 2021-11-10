@@ -10,7 +10,7 @@ const mapKey = (fromKey, toKey) => ({
 	to: [{ key_code: toKey }],
 });
 
-export default {
+module.exports = {
 	title: 'Arrow keys',
 	rules: [
 		{

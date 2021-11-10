@@ -1,4 +1,4 @@
-import { remap } from '../../src/main';
+const { remap } = require('kegen');
 
 const mandatoryMods = ['left_shift'];
 const optionalMods = ['caps_lock', 'command', 'control', 'option'];
@@ -6,7 +6,7 @@ const shiftedNumbersRow = 'pqwertyuio'.split('');
 const numbersRow = ['semicolon', ...'asdfghjkl'.split('')];
 const remapToLayer = (keyCode, toKey) => remap([keyCode, mandatoryMods, optionalMods], toKey);
 
-export default {
+module.exports = {
 	title: 'Symbols layer',
 	rules: [
 		{

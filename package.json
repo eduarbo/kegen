@@ -1,9 +1,8 @@
 {
 	"name": "kegen",
 	"version": "0.0.0",
-	"description": "Karabiner Elements json GENerator",
-	"exports": "./src/main.js",
-	"type": "module",
+	"description": "Karabiner Elements conf GENerator",
+	"main": "./src/main.js",
 	"engines": {
 		"node": ">= 16.13 <17"
 	},
@@ -20,18 +19,15 @@
 		"rimraf": "~3.0.2"
 	},
 	"scripts": {
-		"start": "node --experimental-specifier-resolution=node example/karabiner.js > build/karabiner.json",
+		"start": "node example/karabiner.js > build/karabiner.json",
 		"clean": "rimraf coverage build/*",
 		"lint": "eslint . --ext .js",
-		"test": "NODE_OPTIONS=--experimental-vm-modules jest --coverage",
+		"test": "jest --coverage",
 		"test:watch": "jest --watch",
     "validate": "npm run lint && npm run test",
     "precommit": "npm lint",
     "prepush": "npm test"
 	},
 	"author": "Eduardo Ruiz <eduarbo@gmail.com>",
-	"license": "Apache-2.0",
-	"bin": {
-		"kegen": "src/cli.js"
-	}
+	"license": "Apache-2.0"
 }

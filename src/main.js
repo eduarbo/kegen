@@ -1,6 +1,6 @@
-export * as appIdentifiers from './app-identifiers';
+const appIdentifiers = require('./app-identifiers');
 
-export const from = (key, mandatory = [], optional = ['any']) => ({
+const from = (key, mandatory = [], optional = ['any']) => ({
 	key_code: key,
 	...((mandatory.length || optional.length) && {
 		modifiers: {
@@ -10,14 +10,14 @@ export const from = (key, mandatory = [], optional = ['any']) => ({
 	}),
 });
 
-export const to = (keys, options = {}) =>
+const to = (keys, options = {}) =>
 	keys.map(([key, modifiers]) => ({
 		key_code: key,
 		...(modifiers && { modifiers }),
 		...options,
 	}));
 
-export const manipulator = options => ({
+const manipulator = options => ({
 	type: 'basic',
 	...options,
 });
@@ -25,12 +25,12 @@ export const manipulator = options => ({
 // `modTap` acts like a modifier when held, and a regular keycode when tapped. In
 // other words, you can have a key that sends Escape when you tap it, but
 // functions as a Control or Shift key when you hold it down.
-export const keyToString = (...args) =>
+const keyToString = (...args) =>
 	args
 		.map(([key, modifiers = []]) => [modifiers.length && `${modifiers.join('+')}+`, key].filter(Boolean).join(''))
 		.join(' | ');
 
-export const remap = (fromKey, toKey, { conditions, simultaneous, ...toOptions } = {}) => ({
+const remap = (fromKey, toKey, { conditions, simultaneous, ...toOptions } = {}) => ({
 	description: `${keyToString(fromKey)} to ${keyToString(...toKey)}`,
 	type: 'basic',
 	...(simultaneous
@@ -44,13 +44,13 @@ export const remap = (fromKey, toKey, { conditions, simultaneous, ...toOptions }
 	conditions,
 });
 
-export const modTap = (fromKey, toKey, toKeyOnTap) => ({
+const modTap = (fromKey, toKey, toKeyOnTap) => ({
 	...remap(fromKey, toKey),
 	description: `${keyToString(fromKey)} to ${keyToString(...toKey)}, send ${keyToString(...toKeyOnTap)} on tap`,
 	to_if_alone: to(toKeyOnTap),
 });
 
-export const getRules = mods =>
+const getRules = mods =>
 	mods.reduce((rules, mod) => {
 		// when rules are passed in the form: [qwerty, ['thumbCluster', 'customQwerty']]
 		if (Array.isArray(mod)) {
@@ -61,7 +61,7 @@ export const getRules = mods =>
 		return rules.concat(mod.rules);
 	}, []);
 
-export const profile = (name, mods = [], overrides = {}) => ({
+const profile = (name, mods = [], overrides = {}) => ({
 	name,
 	devices: [],
 	virtual_hid_keyboard: {
@@ -82,4 +82,20 @@ export const profile = (name, mods = [], overrides = {}) => ({
 	},
 });
 
-export { default as toJSON } from './toJSON';
+function toJSON(data) {
+	const JSON_SPACE_INDENTATION = 2;
+	// eslint-disable-next-line no-console
+	console.log(JSON.stringify(data, null, JSON_SPACE_INDENTATION));
+}
+
+module.exports = {
+	to,
+	manipulator,
+	appIdentifiers,
+	keyToString,
+	remap,
+	modTap,
+	getRules,
+	profile,
+	toJSON,
+};

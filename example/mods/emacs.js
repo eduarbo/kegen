@@ -1,4 +1,4 @@
-import * as kegen from '../../src/main';
+const kegen = require('kegen');
 
 const { emacsKeyBindingsException } = kegen.appIdentifiers;
 
@@ -16,7 +16,7 @@ const remap = (fromKey, toKey, opts) =>
 		...opts,
 	});
 
-export default {
+module.exports = {
 	title: 'Emacs and shell style key bindings',
 	rules: [
 		{

@@ -13,5 +13,16 @@ To clone the repository, use the following commands:
 #+begin_src sh
 git clone https://github.com/eduarbo/kegen
 cd kegen
-npm install
+npm start
+Look at build/ for the generated file
 #+end_src
+
+* Usage
+
+#+begin_src sh
+npm install -g kegen
+cd kegen
+npm start
+#+end_src
+
+Look at ~build/~ for the generated file

@@ -1,13 +1,13 @@
-export const browser = ['^org\\.mozilla\\.firefox$', '^com\\.google\\.Chrome$', '^com\\.apple\\.Safari$'];
+const browser = ['^org\\.mozilla\\.firefox$', '^com\\.google\\.Chrome$', '^com\\.apple\\.Safari$'];
 
-export const emacs = [
+const emacs = [
 	'^org\\.gnu\\.Emacs$',
 	'^org\\.gnu\\.AquamacsEmacs$',
 	'^org\\.gnu\\.Aquamacs$',
 	'^org\\.pqrs\\.unknownapp.conkeror$',
 ];
 
-export const remoteDesktop = [
+const remoteDesktop = [
 	'^com\\.microsoft\\.rdc$',
 	'^com\\.microsoft\\.rdc\\.mac$',
 	'^com\\.microsoft\\.rdc\\.osx\\.beta$',
@@ -21,7 +21,7 @@ export const remoteDesktop = [
 	'^com\\.2X\\.Client\\.Mac$',
 ];
 
-export const terminal = [
+const terminal = [
 	'^com\\.apple\\.Terminal$',
 	'^com\\.googlecode\\.iterm2$',
 	'^co\\.zeit\\.hyperterm$',
@@ -29,11 +29,11 @@ export const terminal = [
 	'^net.kovidgoyal.kitty$',
 ];
 
-export const vi = [
+const vi = [
 	'^org\\.vim\\.', // prefix
 ];
 
-export const virtualMachine = [
+const virtualMachine = [
 	'^com\\.vmware\\.fusion$',
 	'^com\\.vmware\\.horizon$',
 	'^com\\.vmware\\.view$',
@@ -45,11 +45,25 @@ export const virtualMachine = [
 	'^com\\.parallels\\.winapp\\.', // prefix
 ];
 
-export const x11 = [
-	'^org\\.x\\.X11$',
-	'^com\\.apple\\.x11$',
-	'^org\\.macosforge\\.xquartz\\.X11$',
-	'^org\\.macports\\.X11$',
+const x11 = ['^org\\.x\\.X11$', '^com\\.apple\\.x11$', '^org\\.macosforge\\.xquartz\\.X11$', '^org\\.macports\\.X11$'];
+
+const emacsKeyBindingsException = [
+	...browser,
+	...emacs,
+	...remoteDesktop,
+	...terminal,
+	...vi,
+	...virtualMachine,
+	...x11,
 ];
 
-export const emacsKeyBindingsException = [...emacs, ...remoteDesktop, ...terminal, ...vi, ...virtualMachine, ...x11];
+module.exports = {
+	browser,
+	emacs,
+	remoteDesktop,
+	terminal,
+	vi,
+	virtualMachine,
+	x11,
+	emacsKeyBindingsException,
+};

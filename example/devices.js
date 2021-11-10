@@ -1,6 +1,4 @@
-/* eslint-disable import/prefer-default-export */
-
-export const corneKeyboard = {
+module.exports = {
 	is_keyboard: true,
 	is_pointing_device: false,
 	product_id: 12384,

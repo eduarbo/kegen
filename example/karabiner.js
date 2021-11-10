@@ -1,14 +1,16 @@
-import { profile, toJSON } from '../src/main';
+#!/usr/bin/env node
 
-import arrows from './mods/arrows';
-import emacs from './mods/emacs';
-import fn from './mods/fn';
-import launcher from './mods/launcher';
-import oldQwerty from './mods/old-qwerty';
-import qwerty from './mods/qwerty';
-import oldSymbols from './mods/old-symbols';
-import symbols from './mods/symbols';
-import accents from './mods/accents';
+const { profile, toJSON } = require('kegen');
+
+const arrows = require('./mods/arrows');
+const emacs = require('./mods/emacs');
+const fn = require('./mods/fn');
+const launcher = require('./mods/launcher');
+const oldQwerty = require('./mods/old-qwerty');
+const qwerty = require('./mods/qwerty');
+const oldSymbols = require('./mods/old-symbols');
+const symbols = require('./mods/symbols');
+const accents = require('./mods/accents');
 
 const corneKeyboard = {
 	is_keyboard: true,
