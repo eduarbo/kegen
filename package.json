@@ -26,7 +26,6 @@
 		"test": "jest --coverage",
 		"test:watch": "jest --watch",
 		"validate": "npm run lint && npm run test",
-		"prepush": "npm test",
 		"prepare": "husky install",
 		"prettier": "prettier --write 'src/**/*.js'"
 	},
