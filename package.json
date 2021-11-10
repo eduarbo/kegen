@@ -24,9 +24,9 @@
 		"lint": "eslint . --ext .js",
 		"test": "jest --coverage",
 		"test:watch": "jest --watch",
-    "validate": "npm run lint && npm run test",
-    "precommit": "npm lint",
-    "prepush": "npm test"
+		"validate": "npm run lint && npm run test",
+		"precommit": "npm lint",
+		"prepush": "npm test"
 	},
 	"author": "Eduardo Ruiz <eduarbo@gmail.com>",
 	"license": "Apache-2.0"

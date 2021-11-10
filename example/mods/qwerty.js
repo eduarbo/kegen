@@ -1,4 +1,4 @@
-const kegen = require('kegen');
+const kegen = require('../..');
 
 const remap = (fromKey, toKey) => kegen.remap(fromKey, toKey);
 const modTap = (fromKey, toKey, toKeyOnTap) => kegen.modTap(fromKey, toKey, toKeyOnTap);

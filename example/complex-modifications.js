@@ -1,4 +1,4 @@
-const { toJSON } = require('kegen');
+const { toJSON } = require('..');
 
 const arrows = require('./mods/arrows');
 const emacs = require('./mods/emacs');

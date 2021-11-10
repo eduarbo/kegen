@@ -1,4 +1,4 @@
-const { remap } = require('kegen');
+const { remap } = require('../..');
 
 const mandatoryMods = ['left_shift', 'right_shift'];
 const optionalMods = [];

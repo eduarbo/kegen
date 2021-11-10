@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-const { profile, toJSON } = require('kegen');
+const { profile, toJSON } = require('..');
 
 const arrows = require('./mods/arrows');
 const emacs = require('./mods/emacs');

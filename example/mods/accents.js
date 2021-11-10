@@ -1,4 +1,4 @@
-const { remap } = require('kegen');
+const { remap } = require('../..');
 
 const mandatoryMods = ['open_bracket'];
 const optionalMods = [''];

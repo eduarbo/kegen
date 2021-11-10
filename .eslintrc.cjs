@@ -1,5 +1,6 @@
 module.exports = {
 	env: {
+		commonjs: true,
 		node: true,
 		es2021: true,
 		jest: true,
@@ -7,8 +8,7 @@ module.exports = {
 	extends: ['airbnb-base', 'plugin:jest/recommended', 'prettier'],
 	plugins: ['jest', 'prettier'],
 	parserOptions: {
-		ecmaVersion: 12,
-		sourceType: 'module',
+		ecmaVersion: 13,
 	},
 	rules: {
 		'no-use-before-define': ['error', { functions: false }],

@@ -1,4 +1,4 @@
-const kegen = require('kegen');
+const kegen = require('../..');
 
 const { emacsKeyBindingsException } = kegen.appIdentifiers;
 
