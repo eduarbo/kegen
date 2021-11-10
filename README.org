@@ -1,5 +1,7 @@
 #+TITLE: Karabiner Elements conf GENerator
 
+[[https://github.com/eduarbo/kegen/actions/workflows/node.js.yml/badge.svg]]
+
 This is a JavaScript library that facilitates the generation of config json files that can be read by Karabiner-Elements, like =karabiner.json= and =complex-modifications.json=.
 
 * Getting Started
