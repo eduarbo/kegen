@@ -9,7 +9,7 @@ module.exports = {
 	rules: [
 		{
 			description:
-            // eslint-disable-next-line max-len
+				// eslint-disable-next-line max-len
 				'Allow to use the key as modifier when the accent key and the vowel key are pressed simultaneously when typing quickly',
 			manipulators: [
 				remapToLayer('a', [['e', ['left_option']], ['a']]),

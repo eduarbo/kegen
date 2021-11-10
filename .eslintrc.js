@@ -8,12 +8,25 @@ module.exports = {
 	extends: ['airbnb-base', 'plugin:jest/recommended', 'prettier'],
 	plugins: ['jest', 'prettier'],
 	parserOptions: {
-		ecmaVersion: 13,
+		ecmaVersion: 12,
 	},
 	rules: {
 		'no-use-before-define': ['error', { functions: false }],
 		'max-len': ['error', { code: 120 }],
 		// Cannot reassign function parameters but allowing modification
 		'no-param-reassign': ['error', { props: false }],
+        // allows mixed tabs and spaces when the spaces are used for alignment
+		'no-mixed-spaces-and-tabs': ['error', 'smart-tabs'],
+		// require trailing commas in multiline object literals
+		'comma-dangle': [
+			'error',
+			{
+				arrays: 'always-multiline',
+				objects: 'always-multiline',
+				imports: 'always-multiline',
+				exports: 'always-multiline',
+				functions: 'always-multiline',
+			},
+		],
 	},
 };
