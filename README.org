@@ -18,4 +18,4 @@ cd kegen
 npm start
 #+end_src
 
-Look at ~build/~ for the generated file and [[file:example][example/]]
+Look at [[file:example/karabiner.js]] for the source file and ~build/karabiner.json~ for the generated file.
