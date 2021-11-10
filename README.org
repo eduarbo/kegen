@@ -1,17 +1,17 @@
-#+TITLE: Karabiner Elements json GENerator
+#+TITLE: Karabiner Elements conf GENerator
 
-This is a JavaScript library that makes it easy to generate a =karabiner.json= file.
+This is a JavaScript library that facilitates the generation of config json files that can be read by Karabiner-Elements, like =karabiner.json= and =complex-modifications.json=.
 
 * Getting Started
 
-This project is intended to be used with the latest Active LTS release of [Node.js][nodejs].
+This project is intended to be used with the latest Active LTS release of [[nodejs][Node.js]].
 
 * Clone repository
 
 To clone the repository, use the following commands:
 
-```sh
+#+begin_src sh
 git clone https://github.com/eduarbo/kegen
 cd kegen
 npm install
-```
+#+end_src
