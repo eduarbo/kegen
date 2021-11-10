@@ -7,6 +7,6 @@ describe('toJSON()', () => {
 		toJSON({});
 		// The first argument of the first call to the function was 'hello'
 		// eslint-disable-next-line no-console
-		expect(console.log.mock.calls[0][0]).toBe('{}');
+		expect(console.log.mock.calls[0][0]).toBe('{1}');
 	});
 });
